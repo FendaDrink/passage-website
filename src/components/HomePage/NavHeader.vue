@@ -2,11 +2,11 @@
     <div class="header-wrapper">
         <div class="menu-wrapper">
             <el-menu 
-        :default-active="activeIndex" 
-        class="el-menu-demo" 
-        mode="horizontal" 
-        :ellipsis="false"
-        @select="handleSelect">
+                :default-active="activeIndex" 
+                class="el-menu-demo" 
+                mode="horizontal" 
+                :ellipsis="false"
+                @select="handleSelect">
             <!-- 网页的logo -->
             <el-menu-item index="0">
                 <img class="logo"
@@ -26,30 +26,29 @@
                 <el-menu-item index="2-3">Column Three</el-menu-item>
                 <el-menu-item index="2-4">Column Four</el-menu-item>
             </el-sub-menu>
-
+            <!-- DETAILS -->
             <el-sub-menu index="3">
-                <template #title>Detail</template>
+                <template #title>DETAILS</template>
                 <el-menu-item index="3-1">Column One</el-menu-item>
                 <el-menu-item index="3-2">Column Two</el-menu-item>
                 <el-menu-item index="3-3">Column Three</el-menu-item>
                 <el-menu-item index="3-4">Column Four</el-menu-item>
             </el-sub-menu>
-            <el-menu-item index="4">Contact</el-menu-item>
-
+            <!-- ABOUT -->
+            <el-menu-item index="4">ABOUT</el-menu-item>
             <!-- 搜索框 -->
             <div class="searchInput">
                 <el-input
-                v-model="searchInfo"
-                placeholder="Please input"
-                class="input-with-select"
-                >
+                    v-model="searchInfo"
+                    placeholder="Please input"
+                    class="input-with-select">
                 <template #append>
                     <el-button :icon="Search" />
                 </template>
                 </el-input>
             </div>
 
-            <!-- 联系我们 -->
+            <!-- CONTACT -->
             <el-button id="contactBtn">CONTACT</el-button>
         </el-menu>
         </div>  
@@ -76,22 +75,35 @@ const handleSelect = (key, keyPath) => {
 .flex-grow {
     flex-grow: 1;
 }
-.header-wrapper,
-el-menu{
-    /* height: 100px; */
-    position: sticky;
+
+.header-wrapper{
+    position: fixed;
+    z-index:9999;
+    top: 0px;
+    left: 0;
+    box-sizing: border-box;
+    background-color: #fff;
 }
 
 .header-wrapper{
     padding: 0;
     width:100%;
-    background-color: orange;
+    height: 100px;
     display: flex;
+    border-bottom: 1px solid #dcdfe6;
 }
 
 .menu-wrapper{
     margin: 0 auto;
     width: 90%;
+    height: 100px;
+}
+
+.el-menu{
+    height: 100%;
+}
+:root{
+    --el-menu-border-color:#dcdfe6;
 }
 
 .searchInput,
