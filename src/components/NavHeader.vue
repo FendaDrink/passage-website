@@ -1,6 +1,7 @@
 <template>
     <div class="header-wrapper">
-        <el-menu 
+        <div class="menu-wrapper">
+            <el-menu 
         :default-active="activeIndex" 
         class="el-menu-demo" 
         mode="horizontal" 
@@ -51,6 +52,7 @@
             <!-- 联系我们 -->
             <el-button id="contactBtn">CONTACT</el-button>
         </el-menu>
+        </div>  
     </div>
 </template>
   
@@ -76,22 +78,27 @@ const handleSelect = (key, keyPath) => {
 }
 .header-wrapper,
 el-menu{
-    height: 100px;
+    /* height: 100px; */
     position: sticky;
 }
 
 .header-wrapper{
     padding: 0;
-    width:90vw;
+    width:100%;
     background-color: orange;
     display: flex;
+}
+
+.menu-wrapper{
+    margin: 0 auto;
+    width: 90%;
 }
 
 .searchInput,
 #contactBtn{
     margin: auto 1%;
-    /* margin-left: 1%; */
 }
+
 
 .input-with-select .el-input-group__prepend {
   background-color: var(--el-fill-color-blank);

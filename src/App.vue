@@ -1,6 +1,6 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
-import NavHeader from './views/NavHeader.vue';
+import NavHeader from './components/NavHeader.vue';
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import NavHeader from './views/NavHeader.vue';
 .wrapper {
   height: 2000px;
   background-color: #bfa;
-  width: 100vw;
+  width: 99vw;
 }
 
 </style>
