@@ -163,7 +163,7 @@ const row2Data = ref([
 }
 
 .wrapper {
-  height: 2000px;
+  /* height: 2000px; */
   width: 99vw;
 }
 
@@ -173,7 +173,7 @@ const row2Data = ref([
 }
 
 .img-wrapper {
-  width: 90%;
+  width: 85%;
   height: 420px;
   margin: 0 auto;
 }
@@ -190,7 +190,7 @@ const row2Data = ref([
 }
 
 .container {
-  width: 90%;
+  width: 85%;
   height: 90%;
   margin: 20px auto 0;
   /* background-color: #fff; */

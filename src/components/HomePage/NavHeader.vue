@@ -95,7 +95,7 @@ const handleSelect = (key, keyPath) => {
 
 .menu-wrapper{
     margin: 0 auto;
-    width: 90%;
+    width: 85%;
     height: 100px;
 }
 
